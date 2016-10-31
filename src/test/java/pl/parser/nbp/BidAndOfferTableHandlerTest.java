@@ -22,7 +22,7 @@ public class BidAndOfferTableHandlerTest {
 	DateTime listDate = new DateTime("2007-04-12");
 	DateTime publicationDate = new DateTime("2007-04-13");
 			
-	String firstCurrencyName = "dolar amerykañski";
+	String firstCurrencyName = "dolar amerykanski";
 	Integer firstConversionRate = 1;
 	CurrencyCode firstCurrencyCode = CurrencyCode.USD;
 	BigDecimal firstBuyingRate = new BigDecimal("2.8210");
@@ -34,9 +34,9 @@ public class BidAndOfferTableHandlerTest {
 	BigDecimal secondBuyingRate = new BigDecimal("3.7976");
 	BigDecimal secondSellingRate = new BigDecimal("3.8744");
 	
-	String correctXml = "<tabela_kursow typ=\"C\"><numer_tabeli>73/C/NBP/2007</numer_tabeli><data_notowania>2007-04-12</data_notowania><data_publikacji>2007-04-13</data_publikacji><pozycja><nazwa_waluty>dolar amerykañski</nazwa_waluty><przelicznik>1</przelicznik><kod_waluty>USD</kod_waluty><kurs_kupna>2,8210</kurs_kupna><kurs_sprzedazy>2,8780</kurs_sprzedazy></pozycja><pozycja><nazwa_waluty>euro</nazwa_waluty><przelicznik>1</przelicznik><kod_waluty>EUR</kod_waluty><kurs_kupna>3,7976</kurs_kupna><kurs_sprzedazy>3,8744</kurs_sprzedazy></pozycja></tabela_kursow>";
+	String correctXml = "<tabela_kursow typ=\"C\"><numer_tabeli>73/C/NBP/2007</numer_tabeli><data_notowania>2007-04-12</data_notowania><data_publikacji>2007-04-13</data_publikacji><pozycja><nazwa_waluty>dolar amerykanski</nazwa_waluty><przelicznik>1</przelicznik><kod_waluty>USD</kod_waluty><kurs_kupna>2,8210</kurs_kupna><kurs_sprzedazy>2,8780</kurs_sprzedazy></pozycja><pozycja><nazwa_waluty>euro</nazwa_waluty><przelicznik>1</przelicznik><kod_waluty>EUR</kod_waluty><kurs_kupna>3,7976</kurs_kupna><kurs_sprzedazy>3,8744</kurs_sprzedazy></pozycja></tabela_kursow>";
 
-	String tableWithWrongType = "<tabela_kursow typ=\"A\"><numer_tabeli>73/C/NBP/2007</numer_tabeli><data_notowania>2007-04-12</data_notowania><data_publikacji>2007-04-13</data_publikacji><pozycja><nazwa_waluty>dolar amerykañski</nazwa_waluty><przelicznik>1</przelicznik><kod_waluty>USD</kod_waluty><kurs_kupna>2,8210</kurs_kupna><kurs_sprzedazy>2,8780</kurs_sprzedazy></pozycja><pozycja><nazwa_waluty>euro</nazwa_waluty><przelicznik>1</przelicznik><kod_waluty>EUR</kod_waluty><kurs_kupna>3,7976</kurs_kupna><kurs_sprzedazy>3,8744</kurs_sprzedazy></pozycja></tabela_kursow>";
+	String tableWithWrongType = "<tabela_kursow typ=\"A\"><numer_tabeli>73/C/NBP/2007</numer_tabeli><data_notowania>2007-04-12</data_notowania><data_publikacji>2007-04-13</data_publikacji><pozycja><nazwa_waluty>dolar amerykanski</nazwa_waluty><przelicznik>1</przelicznik><kod_waluty>USD</kod_waluty><kurs_kupna>2,8210</kurs_kupna><kurs_sprzedazy>2,8780</kurs_sprzedazy></pozycja><pozycja><nazwa_waluty>euro</nazwa_waluty><przelicznik>1</przelicznik><kod_waluty>EUR</kod_waluty><kurs_kupna>3,7976</kurs_kupna><kurs_sprzedazy>3,8744</kurs_sprzedazy></pozycja></tabela_kursow>";
 
 	@Test
 	public void testSuccessfullParsing() throws Exception{

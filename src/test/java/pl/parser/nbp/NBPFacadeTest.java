@@ -4,9 +4,11 @@ import java.math.BigDecimal;
 
 import org.joda.time.DateTime;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 import static org.junit.Assert.*;
 
+@Category(IntegrationTests.class)
 public class NBPFacadeTest {
 
 	@Test

@@ -16,6 +16,31 @@
 			<target>1.8</target>
 		</configuration>
 		</plugin>
+		<plugin>
+	  		<artifactId>maven-surefire-plugin</artifactId>
+	  		<version>2.12.4</version>
+	  		<configuration>
+	    		<excludedGroups>pl.parser.nbp.IntegrationTests</excludedGroups>
+	  		</configuration>
+		</plugin>
+		<plugin>
+	  		<artifactId>maven-failsafe-plugin</artifactId>
+	  		<version>2.12.4</version>
+	  		<configuration>
+	    		<includes>
+	      			<include>**/*.java</include>
+	    		</includes>
+	    		<groups>pl.parser.nbp.IntegrationTests</groups>
+	  		</configuration>
+	  		<executions>
+	    		<execution>
+	      			<goals>
+	        			<goal>integration-test</goal>
+	        			<goal>verify</goal>
+	      			</goals>
+	    		</execution>
+	  		</executions>
+		</plugin>
     </plugins>
   </build>
   
